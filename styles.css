@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playfair+Display:wght@500&family=Raleway:wght@500&display=swap");
+
+* {
+  font-family: "Playfair Display", sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  margin:0;
+  padding: 0;
+}
+
+body {
+  background: #212121;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  width: 100%;
+}
+.logo svg {
+  color: white;
+  padding: 1rem;
+  width: 7rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding-block: 1.5rem;
+  padding-inline: 5rem;
+  gap: 2rem;
+  margin: 0;
+  background: hsl(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(1rem);
+  width: 100%;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  color: white;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-inline-end: 0.75em;
+}
+
+.mobile-nav-toggle i {
+  display: none;
+}
+
+.name-content{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+  width: max-content;
+  padding-inline: 3rem;
+  margin-left: 10%;
+  opacity: 1;
+}
+
+
+.name-content:hover{
+  transform: scaleX(1.1);
+  transition: transform 200ms ease-out;
+  border: none;
+}
+
+.name-content h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 7rem;
+}
+
+.home-img{
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  z-index: -1;
+  object-fit: cover;
+  padding-bottom: 5rem;
+}
+
+.about-me,
+.about,
+.about-motivation,
+.work-experience,
+.personal-qualities,
+.contact-form{
+  background: hsl(0, 0%, 100%, 0.1);
+  padding-inline: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  color: white;
+  line-height: 30px;
+  border-radius: 5px;
+  margin: 4rem;
+}
+
+.about-me h2{
+  font-size: 2rem;
+}
+
+.about-me-btn{
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  background-color: #F6DF2F;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer{
+  position: relative;
+  bottom: 0px; left: 0px; right: 0px;
+  z-index: 10000;
+  background: hsl(0, 0%, 100%, 0.1);
+  display: grid;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 1.5rem 9%;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.footer .footer-navigation a{
+  font-size: 1rem;
+  color: white;
+}
+
+.footer ul{
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+
+
+}
+
+.footer li::after{
+
+  content: "⚪" ;
+  font-size: 6px;
+  color: white;
+  position: relative;
+  line-height: 1rem;
+  top: -2px;
+  padding: 0px 8px 0px 8px;
+  margin: 0px;
+
+}
+
+.copyright p{
+
+  text-align: center;
+  color: white;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+
+
+}
+
+/* About, Resume and Contact pages */
+
+.fancyme img{
+  width: 300px;
+
+}
+
+.fancyme,
+.resume{
+  background: hsl(0, 0%, 100%, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 4rem;
+  border-radius: 5px;
+}
+
+.resume{
+  color: white;
+  gap: 2rem;
+}
+
+.contact-table{
+  width:100%;
+  max-width:550px;
+  border:0;
+}
+
+
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    gap: 1.5em;
+    position: fixed;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(15vh, 10rem) 2em;
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+    transform: translateX(100%);
+    overflow-x: hidden;
+    transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle i {
+    position: absolute;
+    color: white;
+    display: block;
+    width: 0.5rem;
+    aspect-ratio: 1;
+    top: 0.5rem;
+    right: 3rem;
+    z-index: 9999;
+    font-size: 2.5rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+  }
+
+  .logo svg {
+    color: white;
+    padding:0.2rem;
+    width: 20%;
+    
+  }
+
+  
+}
